@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  </head>
+  <body>
+  
+  <!-- Navbar Section  -->
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">LOGO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      
+      <li class="nav-item">
+        <a class="nav-link disabled" href="login" style=" margin-left : 920px; font-size:18px; border-radius: 3px; color: rgb(128,128,128);">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- END Navbar  -->
+  
+  
+ <!-- Registration From  --> 
+    <section>
+    <div class="container">
+      
+      <div class="alert alert-warning text-center my-4">
+        Already have an account? <a href="login" target="blank">Sign in your account</a>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-8 col-xl-6">
+          <div class="row">
+            <div class="col text-center">
+              <h1>Register</h1>
+              <p class="text-h3">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
+            </div>
+          </div>
+          
+          <!--  <div th:if = "${registrtion_session.message}"
+          		th:classpath="${registrtion_session.message}" class="alert alert-success"
+          		role="alert">
+          		
+          		<p th:if = "${registrtion_session.message}"></p>
+          		<th:block th:text= "${#registrtion_session.removeAttribute('message')}"> </th:block> 
+          		</div>
+          --> 
+          <form th:action="@{/registration}" th:object="${user}" method ="Post">
+          <div class="row align-items-center">
+            <div class="col mt-4">
+              <input type="text" class="form-control" name="userName" placeholder="Your Name">
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <input type="number" class="form-control" name="userPhoneNo" placeholder="Phone Number">
+            </div>
+            <div class="col">
+              <input type="email" class="form-control" name="userEmail" placeholder="Email">
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col">
+              <input type="password" class="form-control" name="userPassword" placeholder="Password">
+            </div>
+            <div class="col">
+              <input type="password" class="form-control" name="" placeholder="Confirm Password">
+            </div>
+          </div>
+          <div class="row justify-content-start mt-4">
+            <div class="col">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input">
+                  I Read and Accept <a href="#">Terms and Conditions</a>
+                </label>
+              </div>
+		 </div>
+      </div>
+              <button class="btn btn-primary mt-4" style="margin-bottom:80px;" >Submit</button>
+              </form>      
+        </div> 
+      </div>
+    </div>
+  </section>
+  
+ <!-- END Registration From  --> 
+ 
+ 
+ <!-- Footer  --> 
+ 
+ 
+ <!-- END Footer  --> 
+ 
+  
+	<script src="index.js"></script>
+  </body>
+</html>
